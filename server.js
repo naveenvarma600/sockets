@@ -63,8 +63,11 @@ io.on('connection',(socket)=>{
             })
         }
         else{
-            io.emit('msgrcv',{data:data,
+            socket.broadcast.emit('msgrcv',{data:data,
                 mode:'all'
+            })
+            io.to(data.from).emit('msgrcv',{data:data,
+                mode:'public_me'
             })
         }
     })

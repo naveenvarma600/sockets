@@ -63,9 +63,16 @@ socket.on('msgrcv',(data1)=>{
         ))
     }
     else if(data1.mode=='singlefrom'){
-        $('#ulmsgs').append($('<li>').text(
+        $('#ulmsgs').append($('<li style="float: right">').text(
             `[${data1.data.to} (PRIVATE)] : ${data1.data.msg}`
         ))
+        $('#ulmsgs').append($('<br>'))
+    }
+    else if(data1.mode=='public_me'){
+        $('#ulmsgs').append($('<li style="float: right">').text(
+            `[${data1.data.to} (PUBLIC)] : ${data1.data.msg}`
+        ))
+        $('#ulmsgs').append($('<br>'))
     }
     else{
         $('#ulmsgs').append($('<li>').text(
