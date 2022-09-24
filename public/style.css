@@ -1,42 +1,71 @@
-body{
-    background-color: silver;
+:root{
+    --primary-color: silver;
+    --secondary-color: black;
 }
-#islandimg{
-    margin-left: 5%;
-    height: 350px;
-    width: 400px;
-    border-radius: 100%;
+
+.dark-theme{
+    --primary-color: black;
+    --secondary-color: silver;
 }
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+input,textarea,.card{
+    background-color: var(--primary-color);
+}
+
+input::placeholder,textarea::placeholder{
+    color: var(--secondary-color) !important;
+}
+
+#islandimg {
+  margin-left: 5%;
+  height: 350px;
+  width: 400px;
+  border-radius: 100%;
+}
+
 #islandimg:hover {
-    transform: scale(1.1);
-    }
-#boxx{
-    margin-bottom: 1000px;
+  transform: scale(1.1);
 }
-.section1{
-    padding-bottom: 15%;
+
+#boxx {
+  margin-bottom: 1000px;
 }
-#chatbox{
-    padding-top: 3%;
+
+.section1 {
+  padding-bottom: 15%;
 }
-.row{
-    padding: 1%;
+
+#chatbox {
+  padding-top: 3%;
 }
-#available_list{
-    padding: 1%;
+
+.row {
+  padding: 1%;
 }
-#contentmid{
-    height: 300px;
-    width: 650px;
-    position: fixed;
-    z-index: 1;
-    overflow: auto;
+
+#available_list {
+  padding: 1%;
 }
-#contentbottom{
-    bottom: 5%;
-    position: fixed;
-    z-index: 2;
+
+#contentmid {
+  height: 300px;
+  width: 650px;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
 }
-body{
-    overflow: hidden;
+
+#contentbottom {
+  bottom: 5%;
+  position: fixed;
+  z-index: 2;
 }
+
+body {
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

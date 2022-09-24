@@ -1,0 +1,68 @@
+$color_1: var(--secondary-color);
+$background-color_1: var(--primary-color);
+
+/*# sourceMappingURL=style.css.map */
+&:root {
+	--primary-color: silver;
+	--secondary-color: black;
+}
+.dark-theme {
+	--primary-color: black;
+	--secondary-color: silver;
+}
+body {
+	background-color: $background-color_1;
+	color: $color_1;
+	overflow: hidden;
+}
+input {
+	background-color: $background-color_1;
+	&::placeholder {
+		color: $color_1 !important;
+	}
+}
+textarea {
+	background-color: $background-color_1;
+	&::placeholder {
+		color: $color_1 !important;
+	}
+}
+.card {
+	background-color: $background-color_1;
+}
+#islandimg {
+	margin-left: 5%;
+	height: 350px;
+	width: 400px;
+	border-radius: 100%;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+#boxx {
+	margin-bottom: 1000px;
+}
+.section1 {
+	padding-bottom: 15%;
+}
+#chatbox {
+	padding-top: 3%;
+}
+.row {
+	padding: 1%;
+}
+#available_list {
+	padding: 1%;
+}
+#contentmid {
+	height: 300px;
+	width: 650px;
+	position: fixed;
+	z-index: 1;
+	overflow: auto;
+}
+#contentbottom {
+	bottom: 5%;
+	position: fixed;
+	z-index: 2;
+}
